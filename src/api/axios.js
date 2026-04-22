@@ -1,8 +1,8 @@
 import axios, { AxiosHeaders } from 'axios';
 
-// Use empty baseURL to hit the Vite dev proxy (same origin); undefined/null falls back to API host
+// In Vercel/browser deployments, default to same-origin unless VITE_API_URL is explicitly set.
 const envBase = import.meta.env.VITE_API_URL;
-const baseURL = envBase === undefined || envBase === null ? 'http://localhost:5000' : envBase;
+const baseURL = envBase === undefined || envBase === null ? '' : envBase;
 
 const api = axios.create({
   baseURL,

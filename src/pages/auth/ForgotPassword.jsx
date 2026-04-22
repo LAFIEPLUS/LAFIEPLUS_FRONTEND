@@ -16,10 +16,10 @@ export default function ForgotPassword() {
     e.preventDefault();
     setLoading(true);
     try {
-      await authAPI.forgotPassword(email);
+      await authAPI.forgotPassword({ email: email.trim() });
       setSent(true);
-    } catch {
-      toast.error('Something went wrong. Please try again.');
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Something went wrong. Please try again.');
     } finally {
       setLoading(false);
     }
