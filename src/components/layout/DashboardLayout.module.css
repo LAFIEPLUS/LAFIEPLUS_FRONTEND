@@ -1,0 +1,6 @@
+.layout { display: flex; flex-direction: column; min-height: 100vh; }
+.body { display: flex; flex: 1; }
+.main { flex: 1; overflow-x: hidden; }
+.content { padding: 28px 24px; max-width: 1200px; animation: fadeUp 0.35s ease; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@media (min-width: 1024px) { .content { padding: 32px 36px; } }

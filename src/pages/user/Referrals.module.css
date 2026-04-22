@@ -1,0 +1,39 @@
+.page { display: flex; flex-direction: column; gap: 24px; }
+.header { display: flex; align-items: center; gap: 14px; }
+.headerIcon { width: 48px; height: 48px; border-radius: var(--radius); background: var(--green-pale); color: var(--green); display: flex; align-items: center; justify-content: center; }
+.title { font-size: 24px; font-weight: 800; color: var(--charcoal); }
+.subtitle { font-size: 14px; color: var(--muted); }
+.layout { display: grid; grid-template-columns: 1fr 380px; gap: 20px; align-items: start; }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+.list { display: flex; flex-direction: column; gap: 10px; }
+.referralCard { background: var(--white); border-radius: var(--radius-lg); border: 1.5px solid var(--border); padding: 18px 20px; cursor: pointer; transition: all 0.2s; display: flex; flex-direction: column; gap: 8px; }
+.referralCard:hover { box-shadow: var(--shadow); border-color: rgba(242,101,34,0.3); }
+.referralCard.active { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(242,101,34,0.1); }
+.referralTop { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.facilityName { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--charcoal); }
+.reason { font-size: 13px; color: var(--mid); line-height: 1.4; }
+.referralMeta { display: flex; gap: 14px; flex-wrap: wrap; }
+.referralMeta span { display: flex; align-items: center; gap: 5px; font-family: var(--font-display); font-size: 11px; color: var(--muted); }
+.detail { position: sticky; top: 80px; }
+.detailHeader { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+.detailHeader h2 { font-size: 18px; font-weight: 800; color: var(--charcoal); }
+.detailSection { padding: 12px 0; border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 4px; }
+.detailSection:last-of-type { border-bottom: none; }
+.detailLabel { font-family: var(--font-display); font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+.detailValue { font-size: 14px; color: var(--dark); display: flex; align-items: center; gap: 6px; }
+.phoneLink { font-family: var(--font-display); font-weight: 700; color: var(--orange); font-size: 14px; }
+.timeline { padding: 12px 0; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid var(--border); }
+.timelineItem { display: flex; gap: 12px; align-items: flex-start; }
+.timelineDot { width: 10px; height: 10px; border-radius: 50%; background: var(--orange); flex-shrink: 0; margin-top: 4px; }
+.timelineStatus { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--charcoal); text-transform: capitalize; margin-right: 8px; }
+.timelineDate { font-family: var(--font-display); font-size: 11px; color: var(--muted); }
+.timelineNote { font-size: 12px; color: var(--mid); margin-top: 2px; }
+.appointmentBox { display: flex; align-items: center; gap: 12px; padding: 14px; background: var(--orange-pale); border-radius: var(--radius); margin-top: 8px; }
+.appointmentBox svg { color: var(--orange); flex-shrink: 0; }
+.empty { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 60px; text-align: center; color: var(--muted); }
+.empty svg { opacity: 0.25; }
+.empty h3 { font-size: 18px; font-weight: 700; color: var(--dark); }
+.empty p { font-size: 14px; max-width: 320px; }
+.loadList { display: flex; flex-direction: column; gap: 10px; }
+.skeleton { height: 100px; border-radius: var(--radius-lg); background: linear-gradient(90deg, var(--surface) 25%, var(--border) 50%, var(--surface) 75%); background-size: 200% 100%; animation: shimmer 1.2s infinite; }
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }

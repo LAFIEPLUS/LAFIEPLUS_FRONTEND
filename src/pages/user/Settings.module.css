@@ -1,0 +1,22 @@
+.page { display: flex; flex-direction: column; gap: 24px; }
+.header { }
+.title { font-size: 24px; font-weight: 800; color: var(--charcoal); }
+.subtitle { font-size: 14px; color: var(--muted); margin-top: 4px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.sectionTitle { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 700; color: var(--charcoal); margin-bottom: 20px; }
+.sectionTitle svg { color: var(--orange); }
+.settingRow { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+.settingLabel { font-family: var(--font-display); font-size: 14px; font-weight: 600; color: var(--charcoal); margin-bottom: 4px; }
+.settingDesc { font-size: 13px; color: var(--muted); line-height: 1.5; max-width: 320px; }
+.toggle { width: 46px; height: 26px; border-radius: 99px; border: none; cursor: pointer; position: relative; transition: background 0.25s; flex-shrink: 0; margin-top: 2px; }
+.toggle.on { background: var(--green); }
+.toggle.off { background: var(--border); }
+.thumb { position: absolute; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: white; box-shadow: 0 1px 4px rgba(0,0,0,0.2); transition: left 0.25s; }
+.on .thumb { left: 23px; }
+.off .thumb { left: 3px; }
+.infoRow { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.infoRow:last-child { border-bottom: none; }
+.infoLabel { font-family: var(--font-display); font-size: 13px; color: var(--muted); font-weight: 500; }
+.infoValue { font-family: var(--font-display); font-size: 13px; font-weight: 600; color: var(--dark); }
+.active { color: var(--green) !important; }
+.saveBtn { align-self: flex-start; }

@@ -1,0 +1,21 @@
+.group { display: flex; flex-direction: column; gap: 6px; }
+.label { font-family: var(--font-display); font-size: 13px; font-weight: 600; color: var(--dark); }
+.wrapper { position: relative; }
+.icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted); pointer-events: none; }
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 15px;
+  color: var(--charcoal);
+  background: var(--white);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+.input.withIcon { padding-left: 42px; }
+.input:focus { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(242,101,34,0.12); }
+.input::placeholder { color: var(--muted); }
+.input.hasError { border-color: var(--danger); }
+.input.hasError:focus { box-shadow: 0 0 0 3px rgba(220,38,38,0.12); }
+.error { font-size: 12px; color: var(--danger); font-family: var(--font-display); }

@@ -1,0 +1,68 @@
+.page { display: flex; flex-direction: column; gap: 28px; }
+.header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.greeting { font-family: var(--font-display); font-size: 14px; color: var(--muted); margin-bottom: 4px; }
+.name { font-size: 28px; font-weight: 800; color: var(--charcoal); margin-bottom: 4px; }
+.subtitle { font-size: 14px; color: var(--mid); }
+.checkBtn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px; background: var(--orange); color: white; border-radius: var(--radius); font-family: var(--font-display); font-size: 14px; font-weight: 600; box-shadow: var(--shadow-orange); transition: all 0.2s; }
+.checkBtn:hover { background: var(--orange-dark); transform: translateY(-1px); }
+
+.notice { display: flex; align-items: center; gap: 10px; padding: 12px 16px; background: var(--warning-pale); border-radius: var(--radius); border-left: 3px solid var(--warning); font-family: var(--font-display); font-size: 13px; color: var(--warning); }
+.noticeLink { margin-left: auto; font-weight: 700; color: var(--warning); white-space: nowrap; }
+
+.quickGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.quickCard { display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-radius: var(--radius-lg); text-decoration: none; transition: all 0.2s; border: 1px solid transparent; }
+.quickCard.orange { background: var(--orange-pale); }
+.quickCard.green { background: var(--green-pale); }
+.quickCard.orange:hover { background: var(--orange); color: white; transform: translateY(-2px); box-shadow: var(--shadow-orange); }
+.quickCard.green:hover { background: var(--green); color: white; transform: translateY(-2px); box-shadow: var(--shadow-green); }
+.quickIcon { width: 42px; height: 42px; border-radius: var(--radius); background: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow-sm); }
+.quickCard.orange .quickIcon { color: var(--orange); } .quickCard.green .quickIcon { color: var(--green); }
+.quickCard:hover .quickIcon { background: rgba(255,255,255,0.2); box-shadow: none; color: white; }
+.quickLabel { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: inherit; }
+.quickDesc { font-family: var(--font-display); font-size: 12px; color: inherit; opacity: 0.7; }
+.quickCard.orange .quickLabel { color: var(--orange); } .quickCard.green .quickLabel { color: var(--green); }
+.quickCard.orange .quickDesc { color: var(--orange-dark); } .quickCard.green .quickDesc { color: var(--green); }
+.quickCard:hover .quickLabel, .quickCard:hover .quickDesc { color: white; opacity: 1; }
+.quickArrow { margin-left: auto; opacity: 0.4; transition: all 0.2s; }
+.quickCard:hover .quickArrow { opacity: 1; transform: translateX(3px); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.cardHead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.cardTitle { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 700; color: var(--charcoal); }
+.cardTitle svg { color: var(--orange); }
+.viewAll { font-family: var(--font-display); font-size: 12px; font-weight: 600; color: var(--orange); }
+
+.sessionRow { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); gap: 10px; }
+.sessionRow:last-child { border-bottom: none; }
+.sessionSymptoms { font-size: 14px; color: var(--dark); flex: 1; }
+.sessionRight { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.sessionDate { font-size: 11px; color: var(--muted); font-family: var(--font-display); }
+
+.consultRow { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); text-decoration: none; transition: background 0.15s; border-radius: var(--radius-sm); }
+.consultRow:last-child { border-bottom: none; }
+.consultRow:hover { background: var(--surface); padding-left: 6px; }
+.consultAvatar { width: 36px; height: 36px; border-radius: 50%; background: var(--gradient); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-family: var(--font-display); font-size: 14px; flex-shrink: 0; }
+.consultPartner { font-family: var(--font-display); font-size: 14px; font-weight: 600; color: var(--charcoal); }
+.consultConcern { font-size: 12px; color: var(--muted); }
+
+.referralRow { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); }
+.referralRow:last-child { border-bottom: none; }
+.referralFacility { font-size: 14px; font-weight: 600; color: var(--dark); font-family: var(--font-display); }
+.referralRight { display: flex; align-items: center; gap: 8px; }
+.urgencyDot { width: 8px; height: 8px; border-radius: 50%; }
+.urgencyDot.routine { background: var(--green); } .urgencyDot.urgent { background: var(--warning); } .urgencyDot.emergency { background: var(--danger); }
+
+.empty { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 24px 0; color: var(--muted); text-align: center; }
+.empty svg { opacity: 0.3; }
+.empty p { font-family: var(--font-display); font-size: 13px; }
+.emptyBtn { padding: 8px 20px; background: var(--orange-pale); color: var(--orange); border-radius: var(--radius-sm); font-family: var(--font-display); font-size: 13px; font-weight: 600; transition: all 0.2s; border: none; cursor: pointer; }
+.emptyBtn:hover { background: var(--orange); color: white; }
+
+.tipCard { background: linear-gradient(135deg, var(--charcoal), #2C3E2C); border: none; }
+.tipInner { display: flex; gap: 16px; align-items: flex-start; }
+.tipIcon { color: var(--green-light); flex-shrink: 0; margin-top: 2px; }
+.tipTitle { font-size: 15px; font-weight: 700; color: white; margin-bottom: 8px; }
+.tipText { font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.6; }
+
+.skeleton { height: 80px; background: linear-gradient(90deg, var(--surface) 25%, var(--border) 50%, var(--surface) 75%); background-size: 200% 100%; animation: shimmer 1.2s infinite; border-radius: var(--radius); }
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }

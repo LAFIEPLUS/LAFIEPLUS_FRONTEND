@@ -1,0 +1,51 @@
+.page { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; }
+
+/* LEFT PANEL */
+.left { position: relative; background: var(--charcoal); overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 60px 48px; }
+.leftBg { position: absolute; inset: 0; background: var(--gradient); opacity: 0.08; }
+.leftContent { position: relative; z-index: 1; color: white; max-width: 380px; }
+.logoMark { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 24px; font-weight: 700; margin-bottom: 48px; }
+.logoIcon { width: 36px; height: 36px; border-radius: 50%; background: var(--gradient); display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 20px; }
+.orange { color: var(--orange); }
+.green { color: var(--green-light); }
+.leftTitle { font-size: clamp(26px, 3vw, 38px); font-weight: 800; line-height: 1.15; margin-bottom: 16px; }
+.leftDesc { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 32px; }
+.leftFeatures { display: flex; flex-direction: column; gap: 12px; }
+.leftFeature { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 14px; color: rgba(255,255,255,0.8); }
+.tick { width: 22px; height: 22px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+
+/* RIGHT PANEL */
+.right { display: flex; align-items: center; justify-content: center; padding: 48px 40px; background: var(--white); }
+.formBox { width: 100%; max-width: 400px; animation: fadeUp 0.4s ease; }
+.title { font-size: 28px; font-weight: 800; color: var(--charcoal); margin-bottom: 6px; }
+.subtitle { font-size: 14px; color: var(--muted); margin-bottom: 32px; }
+.form { display: flex; flex-direction: column; gap: 18px; }
+.pwGroup { position: relative; }
+.pwToggle { position: absolute; right: 14px; bottom: 14px; color: var(--muted); transition: color 0.2s; }
+.pwToggle:hover { color: var(--charcoal); }
+.forgot { text-align: right; margin-top: -8px; }
+.forgot a { font-family: var(--font-display); font-size: 13px; color: var(--orange); font-weight: 600; }
+.hint { font-size: 12px; color: var(--muted); margin-top: -10px; font-family: var(--font-display); }
+.switchText { text-align: center; margin-top: 24px; font-family: var(--font-display); font-size: 14px; color: var(--mid); }
+.switchLink { color: var(--orange); font-weight: 600; }
+
+/* ROLE SELECT */
+.roleSelect { display: flex; flex-direction: column; gap: 8px; }
+.roleLabel { font-family: var(--font-display); font-size: 13px; font-weight: 600; color: var(--dark); }
+.roleBtns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.roleBtn { padding: 12px; border: 2px solid var(--border); border-radius: var(--radius); font-family: var(--font-display); font-size: 13px; font-weight: 600; color: var(--mid); transition: all 0.2s; background: var(--white); }
+.roleBtn:hover { border-color: var(--orange); color: var(--orange); }
+.roleActive { border-color: var(--orange); background: var(--orange-pale); color: var(--orange); }
+
+/* SUCCESS BOX */
+.successBox { text-align: center; padding: 32px 0; }
+.successIcon { width: 64px; height: 64px; border-radius: 50%; background: var(--green-pale); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: var(--green); }
+.successBox h2 { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+.successBox p { color: var(--mid); font-size: 14px; line-height: 1.6; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@media (max-width: 768px) {
+  .page { grid-template-columns: 1fr; }
+  .left { display: none; }
+  .right { padding: 32px 24px; }
+}
