@@ -12,6 +12,7 @@ import ForgotPassword from './pages/auth/ForgotPassword.jsx';
 import Dashboard from './pages/user/Dashboard.jsx';
 import SymptomChecker from './pages/user/SymptomChecker.jsx';
 import Library from './pages/user/Library.jsx';
+import ArticleDetail from './pages/user/ArticleDetail.jsx';
 import Consultations from './pages/user/Consultations.jsx';
 import ConsultationRoom from './pages/user/ConsultationRoom.jsx';
 import Facilities from './pages/user/Facilities.jsx';
@@ -76,7 +77,7 @@ function AppRoutes() {
         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
         <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
         <Route path="/library" element={<ProtectedRoute><Library /></ProtectedRoute>} />
-        <Route path="/library/:id" element={<ProtectedRoute><Library /></ProtectedRoute>} />
+        <Route path="/library/:id" element={<ProtectedRoute><ArticleDetail /></ProtectedRoute>} />
         <Route path="/consultations" element={<ProtectedRoute><Consultations /></ProtectedRoute>} />
         <Route path="/consultations/:id" element={<ProtectedRoute><ConsultationRoom /></ProtectedRoute>} />
         <Route path="/facilities" element={<ProtectedRoute><Facilities /></ProtectedRoute>} />
