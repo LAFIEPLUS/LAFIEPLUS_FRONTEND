@@ -7,6 +7,7 @@ import Landing from './pages/Landing.jsx';
 import Login from './pages/auth/Login.jsx';
 import Register from './pages/auth/Register.jsx';
 import ForgotPassword from './pages/auth/ForgotPassword.jsx';
+import ResetPassword from './pages/auth/ResetPassword.jsx';
 
 // User pages
 import Dashboard from './pages/user/Dashboard.jsx';
@@ -72,6 +73,8 @@ function AppRoutes() {
         <Route path="/login" element={<GuestRoute><Login /></GuestRoute>} />
         <Route path="/register" element={<GuestRoute><Register /></GuestRoute>} />
         <Route path="/forgot-password" element={<GuestRoute><ForgotPassword /></GuestRoute>} />
+        <Route path="/reset-password" element={<GuestRoute><ResetPassword /></GuestRoute>} />
+        <Route path="/reset-password/:token" element={<GuestRoute><ResetPassword /></GuestRoute>} />
 
         {/* Shared authenticated */}
         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
